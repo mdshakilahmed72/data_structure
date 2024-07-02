@@ -12,11 +12,11 @@ class node{
         this->prev = NULL;
     }
 };
-void insert_at_head(node * &head, int value){
+void insert_at_head(node * &head,node * &tail, int value){
     node * newnode = new node(value);
-    
     if(head == NULL){
         head = newnode;
+        tail = newnode;
         return;
     }
     
@@ -83,7 +83,7 @@ int main() {
    int pos, value;
    cin>>pos>>value;
     if(pos==0){
-        insert_at_head(head, value);
+        insert_at_head(head,tail value);
     }
     else if(pos>=size(head)){
         cout<<"Invalid Index"<<endl;
