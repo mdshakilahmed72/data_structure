@@ -23,6 +23,7 @@ void doubly_reverse(node * head, node * tail){
         i= i->next;
         j= j->prev;
     }
+  swap(i->value,j->value);
 }
 
 void normal_print(node * head){
